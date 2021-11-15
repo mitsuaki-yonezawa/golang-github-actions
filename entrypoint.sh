@@ -198,8 +198,6 @@ ${OUTPUT}
 # check_staticcheck is excute "staticcheck" and generate ${COMMENT} and ${SUCCESS}
 check_staticcheck() {
 	set +e
-	ls -la
-	pwd
 	OUTPUT=$(sh -c "staticcheck ${FLAGS} ./... $*" 2>&1)
 	SUCCESS=$?
 
